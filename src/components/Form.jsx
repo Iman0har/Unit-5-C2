@@ -18,7 +18,7 @@ useEffect(()=>{
 },[])
 
  const getdata=()=>{
-    fetch("http://localhost:3001/games").then((d)=>d.json()).then((res)=>{setTotal(res)})
+    fetch("https://fake-server-pavan.herokuapp.com/games").then((d)=>d.json()).then((res)=>{setTotal(res)})
 }
 
   const handlechange =(e)=>{
@@ -38,7 +38,7 @@ useEffect(()=>{
             // e.preventDefault();
             console.log(formData)
 
-            fetch("http://localhost:3001/games",{
+            fetch("https://fake-server-pavan.herokuapp.com/games",{
                 method:"POST",
                 body:JSON.stringify(formData),
                 headers:{
